@@ -1,5 +1,5 @@
 var assert = require("assert");
-const { add } = require("../src/index.js");
+const { add, ArrayLength, ReduceArray } = require("../src/index.js");
 
 describe("this test is a test", () => {
   describe("some random", () => {
@@ -7,8 +7,16 @@ describe("this test is a test", () => {
       assert.strictEqual([1, 2, 3].indexOf(1), 0);
     });
 
-    it("add function from", () => {
+    it("add function", () => {
       assert.strictEqual(add(7, 8), 15);
+    });
+
+    it("ArrayLength", () => {
+      assert.strictEqual(ReduceArray({ values: [1, 2, 3, 4, 5] }), 15);
+    });
+
+    it("ArrayLength", () => {
+      assert.strictEqual(ArrayLength({ values: ["ff", "dd"], index: 1 }), "dd");
     });
   });
 });
