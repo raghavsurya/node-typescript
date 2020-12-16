@@ -11,12 +11,16 @@ describe("this test is a test", () => {
       assert.strictEqual(add(7, 8), 15);
     });
 
-    it("ArrayLength", () => {
+    it("ReduceArray", () => {
       assert.strictEqual(ReduceArray({ values: [1, 2, 3, 4, 5] }), 15);
     });
 
     it("ArrayLength", () => {
       assert.strictEqual(ArrayLength({ values: ["ff", "dd"], index: 1 }), "dd");
+    });
+
+    it("ArrayLength for non valid input", () => {
+      assert.strictEqual(ArrayLength({ values: ["ff", "dd"], index: 3 }), null);
     });
   });
 });
